@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VN7 | أبوعتب للبرمجة</title>
+    <style>
+        :root {
+            --bg: #050507;
+            --purple: #8e2de2;
+            --card: #0f0f13;
+            --accent: #00e5ff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0; padding: 0;
+            text-align: center;
+        }
+
+        /* أنيميشن الرقص/التحرك للصور */
+        @keyframes dance {
+            0% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-10px) scale(1.02); }
+            100% { transform: translateY(0px) scale(1); }
+        }
+
+        .dancing-img {
+            animation: dance 3s ease-in-out infinite;
+            border: 2px solid var(--purple);
+        }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 5%; background: rgba(0,0,0,0.9);
+            border-bottom: 2px solid var(--purple);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .menu-btn {
+            width: 50px; height: 50px;
+            cursor: pointer; border-radius: 50%;
+        }
+
+        .logo { font-size: 28px; font-weight: bold; color: white; }
+        .logo span { color: var(--purple); }
+
+        .container { max-width: 600px; margin: 20px auto; padding: 15px; }
+
+        .page { display: none; }
+        .active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .hero-btn {
+            background: #5865F2; display: block; padding: 20px;
+            border-radius: 15px; color: white; text-decoration: none;
+            font-weight: bold; font-size: 18px; margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--accent); font-size: 22px; margin: 30px 0 15px;
+            border-right: 5px solid var(--purple); padding-right: 15px; text-align: right;
+        }
+
+        .card {
+            background: var(--card); border-radius: 20px; padding: 15px;
+            border: 1px solid #222; margin-bottom: 25px; text-align: right;
+        }
+
+        .card img { width: 100%; border-radius: 15px; margin-bottom: 15px; }
+
+        .btn-install {
+            display: block; padding: 15px; border-radius: 12px;
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            color: white; text-decoration: none; font-weight: bold;
+            margin-top: 10px; text-align: center; font-size: 18px;
+        }
+
+        .features {
+            font-size: 14px; color: #aaa; margin-top: 10px;
+            padding: 10px; background: rgba(255,255,255,0.03); border-radius: 10px;
+        }
+
+        .rating { color: #ffca28; margin-bottom: 5px; }
+
+        footer { padding: 30px; color: #444; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://raw.githubusercontent.com/hatm12345cc-source/krnl/refs/heads/main/32327A28-AEE3-4C73-902C-C6C91EED9868.png" class="menu-btn dancing-img" onclick="toggleMenu()">
+    <div class="logo">V<span>N7</span></div>
+</header>
+
+<div class="container">
+    
+    <div id="home" class="page active">
+        <div class="section-title">القائمة الرئيسية 🏠</div>
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/krnl/refs/heads/main/32327A28-AEE3-4C73-902C-C6C91EED9868.png" class="dancing-img" style="width:150px; border-radius:50%; margin: 20px 0;">
+        <a href="https://discord.gg/haX59nFsM" class="hero-btn">انضم لسيرفر الديسكورد الرسمي 💬</a>
+        <p style="color:#888;">أهلاً بك في VN7 - عالم البرمجة والهاكات</p>
+    </div>
+
+    <div id="hacks" class="page">
+        
+        <div class="section-title">هاك أندرويد 🤖</div>
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/krnl/refs/heads/main/IMG_1949.jpeg" class="dancing-img" style="width:100%; border-radius:15px; margin-bottom:20px;">
+
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_1929.png" class="dancing-img">
+            <div class="rating">⭐⭐⭐⭐⭐ (5/5)</div>
+            <h3>Delta Android</h3>
+            <div class="features">
+                الميزات: دعم كامل للسكربتات، واجهة سهلة، حقن سريع جداً.
+            </div>
+            <a href="https://www.mediafire.com/file/ti5geyfey7thof9/Delta-2.707.734.apk/file" class="btn-install">Install Delta</a>
+        </div>
+
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_1935.jpeg" class="dancing-img">
+            <div class="rating">⭐⭐⭐⭐ (4.5/5)</div>
+            <h3>SkibX Android</h3>
+            <div class="features">
+                الميزات: خفيف على الجهاز، يتخطى الحماية بذكاء، تحديثات دورية.
+            </div>
+            <a href="https://www.mediafire.com/file/khh1d18x0sbdfc6/SkibX-2.707.734.apk/file" class="btn-install">Install SkibX</a>
+        </div>
+
+        <div class="card">
+            <img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_1929.png" class="dancing-img">
+            <div class="rating">⭐⭐⭐⭐ (4/5)</div>
+            <h3>Codex Android</h3>
+            <div class="features">
+                الميزات: تنفيذ سكربتات معقدة، مجاني بالكامل، نظام مفاتيح سهل.
+            </div>
+            <a href="https://www.mediafire.com/file/80ue9v9kcdmnzhh/Codex+v2.708.apk/file" class="btn-install">Install Codex</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    VN7 | من صنع أبوعتب للبرمجة والتكنولوجيا © 2026
+</footer>
+
+<script>
+    function toggleMenu() {
+        var home = document.getElementById('home');
+        var hacks = document.getElementById('hacks');
+        if (home.style.display !== 'none') {
+            home.style.display = 'none';
+            hacks.style.display = 'block';
+            hacks.classList.add('active');
+        } else {
+            hacks.style.display = 'none';
+            home.style.display = 'block';
+            home.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
